@@ -1,0 +1,45 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "blueprint/screen.sass";
+@import "blueprint/modules/scaffolding.sass";
+@import "compass/reset.sass";
+
+@include blueprint;
+
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
+@include blueprint-scaffolding;
+
+.header {
+  text-align: center; }
+
+.content {
+  margin: 10px;
+  padding: 10px;
+  border: {
+    top: 1px solid black; }; }
+
+.progress_spinner {
+  display: none; }
+
+textarea.simple {
+  width: 254px;
+  height: 50px; }
+
+body {
+  background: #e1e9f3; }
+
+.password {
+  margin: 0.5em 0;
+  background-color: white;
+  padding: 5px; }
+
+.current_step {
+  font-weight: bold; }
+
+.step_indicator p span {
+  font-weight: bold;
+  color: #0a2b8a; }
