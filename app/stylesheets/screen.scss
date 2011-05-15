@@ -3,15 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "blueprint/screen.sass";
-@import "blueprint/modules/scaffolding.sass";
-@import "compass/reset.sass";
-
-@include blueprint;
-
-// Remove the scaffolding when you're ready to start doing visual design.
-// Or leave it in if you're happy with how blueprint looks out-of-the-box
-@include blueprint-scaffolding;
+@import "compass";
 
 .header {
   text-align: center; }
