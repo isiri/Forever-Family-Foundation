@@ -4,34 +4,15 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass";
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+@import "compass/layout/grid-background";
 
-.header {
-  text-align: center; }
+@import "blueprint";
 
-.content {
-  margin: 10px;
-  padding: 10px;
-  border: {
-    top: 1px solid black; }; }
-
-.progress_spinner {
-  display: none; }
-
-textarea.simple {
-  width: 254px;
-  height: 50px; }
-
-body {
-  background: #e1e9f3; }
-
-.password {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px; }
-
-.current_step {
-  font-weight: bold; }
-
-.step_indicator p span {
-  font-weight: bold;
-  color: #0a2b8a; }
+@import "partials/vars";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/misc";
+@import "partials/development";

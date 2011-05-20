@@ -1,0 +1,16 @@
+#footer {
+  text-align:center;
+
+    p {
+      padding: $global-padding;
+      text-align:left;
+    }
+
+    ul#footer_nav{
+      padding:20px 20px 0 20px;
+      li {
+        @include inline-block;
+      }
+  }
+
+}

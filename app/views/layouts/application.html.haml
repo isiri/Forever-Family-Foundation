@@ -1,38 +1,31 @@
-!!! XML
-!!!
-%html{html_attrs}
-  %head
-    %title= t("site_name")
-    = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/print.css', :media => 'print'
-    /[if IE]
-      = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
-    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'
-    = javascript_include_tag '/javascripts/rails_admin/rails.js'
-    = javascript_tag "var AUTH_TOKEN = #{form_authenticity_token.inspect};" if protect_against_forgery?
+= render 'layouts/header'
 
 %body
-  .container
-    .header
-      %h1= t("site_name")
-      - if is_admin?
-        = link_to t("navigation.admin"), '/admin' if is_admin?
-      - elsif current_user
-        = link_to t("navigation.home"), url_for(:controller => 'welcome', :action => 'logged_in_index')
-        = link_to t("navigation.edit"), edit_account_path
-        = link_to t("navigation.logout"), destroy_user_session_path
-      - else
-        = link_to t("navigation.home"), root_path
-        = link_to t("navigation.login"), new_user_session_path
-        = link_to t("navigation.register"), new_account_path
-      = link_to t("navigation.adg_registration"), new_adg_registration_path
-      
-    .content
-      %p.notice
-        = notice
-      %p.alert
-        = alert        
-               
-      %h2= @cms_page.title
-      = textilize @cms_page.body
-      = yield  
+  #container
+    #layout
+      #header
+        %h1
+          = t("site_name")
+
+      #top_nav
+        = render "shared/nav"
+
+      #sidebar
+        %ul
+          %li Lorem ipsum
+          %li dolor sit amet
+          %li consectetur adipisicing
+          %li elit.
+
+      #content
+        %p.notice
+          = notice
+        %p.alert
+          = alert
+
+        %h2= @cms_page.title
+        = textilize @cms_page.body
+        = yield
+
+      #footer_spacer
+    = render 'layouts/footer'

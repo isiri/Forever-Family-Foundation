@@ -1,0 +1,18 @@
+@include sticky-footer(275px, "#layout", "#footer_spacer", "#footer");
+
+html, body, #container {
+  height: 100%;
+  background-color: #000;  
+}
+
+#container {
+  padding: $global-padding;
+  @include container;
+  background-color: #fff;
+  #header, #footer {
+    @include column(24); }
+  #sidebar {
+    @include column(6); }
+  #content {
+    @include column(18, true); } }
+    

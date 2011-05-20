@@ -1,14 +1,17 @@
 source 'http://rubygems.org'
 
+# Rails 3.1
+# gem 'rails', git: 'https://github.com/rails/rails.git'
+# gem 'rack', git: 'https://github.com/rack/rack.git'
 gem 'rails'
 
 gem 'mysql2', '0.2.7'
 
 gem 'compass'
 gem 'haml'
-gem 'devise' # Devise must be required before RailsAdmin
+gem 'devise' 
 gem "cancan"
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'activeadmin'
 gem "transitions", :require => ["transitions", "active_record/transitions"]
 gem 'will_paginate'
 gem 'paperclip'

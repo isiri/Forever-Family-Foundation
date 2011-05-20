@@ -1,6 +1,8 @@
 ForeverFamilyFoundation::Application.routes.draw do
 
-  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
+  ActiveAdmin.routes(self)
+
+  devise_for :users, ActiveAdmin::Devise.config
   
   root :to => "welcome#index"
 
