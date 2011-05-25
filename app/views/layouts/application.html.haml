@@ -5,25 +5,52 @@
 
     #container
 
-      #top_nav
-        = render "shared/top_nav"
-
       #sidebar
-        %ul
+        %ul.nav#user_nav
+          %li
+            = link_to "Become a member"
+          %li
+            = link_to "Login"
+
+        %ul.nav#site_nav
           %li Lorem ipsum
           %li dolor sit amet
           %li consectetur adipisicing
           %li elit.
 
       #content
-        %p.notice
-          = notice
-        %p.alert
-          = alert
 
-        %h2= @cms_page.title
-        = textilize @cms_page.body
-        = yield
+        %ul.nav#global_nav
+          - if is_admin?
+            %li
+              = link_to t("navigation.admin"), '/admin' if is_admin?
+          - elsif current_user
+            %li
+              = link_to t("navigation.home"), url_for(:controller => 'welcome', :action => 'logged_in_index')
+            %li
+              = link_to t("navigation.edit"), edit_account_path
+            %li
+              = link_to t("navigation.logout"), destroy_user_session_path
+          - else
+            %li
+              = link_to t("navigation.home"), root_path
+            %li
+              = link_to t("navigation.login"), new_user_session_path
+            %li
+              = link_to t("navigation.register"), new_account_path
+
+          %li.current
+            = link_to t("navigation.adg_registration"), new_adg_registration_path
+
+        #content_main
+          %p.notice
+            = notice
+          %p.alert
+            = alert
+
+          %h2= @cms_page.title
+          = textilize @cms_page.body
+          = yield
 
     #footer_spacer
   = render 'layouts/footer'

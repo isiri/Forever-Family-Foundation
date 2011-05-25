@@ -2,34 +2,34 @@
 
 html, body, #container {
   height: 100%;
+  font-family:Verdana, sans-serif;
 }
 
 body {
   background:#000 url('/images/header.jpg') no-repeat top;
-  padding-top: 90px;
+  padding-top: 90px; // allow for logo
 }
 
 #layout {
+  @include border-radius;  
   width:$page-width;
-  margin:auto;
-  @include border-radius;
-  // padding: $padd-top $padd-sides;
+  margin:0 auto;
   background-color:#fff;
 }
 
 #container {
-  padding: $padd-top $padd-sides;
+  padding: 0 $padd-sides;
   @include container;
-  #header, #footer {
+  #footer {
     @include column(24); }
   #sidebar {
-    background-color:#fff;
-    @include column(6); }
-  #content {
-    background-color:#fff;
-    @include column(18, true); }
+    @include column(7);  
+    background-color:#fff; }
+  #content, #content_main {
+    @include column(17, true);  
+    background-color:#fff; }
   }
-    
-// #content, #sidebar {
-//   padding-top: $padd-top;
-// }
+
+#content_main {
+  @include clearfix;
+}
