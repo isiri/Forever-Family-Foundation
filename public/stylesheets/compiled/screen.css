@@ -79,36 +79,53 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -275px;
+  margin-bottom: -200px;
 }
 /* line 18, ../../../../../.rvm/gems/ruby-1.9.2-p180@fff/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #layout #footer_spacer {
-  height: 275px;
+  height: 200px;
 }
 
 /* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p180@fff/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #footer {
   clear: both;
   position: relative;
-  height: 275px;
+  height: 200px;
 }
 
 /* line 3, ../../../app/stylesheets/partials/_layout.scss */
 html, body, #container {
   height: 100%;
-  background-color: #000;
 }
 
-/* line 8, ../../../app/stylesheets/partials/_layout.scss */
+/* line 7, ../../../app/stylesheets/partials/_layout.scss */
+body {
+  background: black url("/images/header.jpg") no-repeat top;
+  padding-top: 90px;
+}
+
+/* line 12, ../../../app/stylesheets/partials/_layout.scss */
+#layout {
+  width: 965px;
+  margin: auto;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+/* line 20, ../../../app/stylesheets/partials/_layout.scss */
 #container {
-  padding: 20px;
+  padding: 20px 15px;
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  background-color: #fff;
 }
-/* line 12, ../../../app/stylesheets/partials/_layout.scss */
+/* line 23, ../../../app/stylesheets/partials/_layout.scss */
 #container #header, #container #footer {
   display: inline;
   float: left;
@@ -119,8 +136,9 @@ html, body, #container {
 * html #container #header, * html #container #footer {
   overflow-x: hidden;
 }
-/* line 14, ../../../app/stylesheets/partials/_layout.scss */
+/* line 25, ../../../app/stylesheets/partials/_layout.scss */
 #container #sidebar {
+  background-color: #fff;
   display: inline;
   float: left;
   margin-right: 10px;
@@ -130,8 +148,9 @@ html, body, #container {
 * html #container #sidebar {
   overflow-x: hidden;
 }
-/* line 16, ../../../app/stylesheets/partials/_layout.scss */
+/* line 28, ../../../app/stylesheets/partials/_layout.scss */
 #container #content {
+  background-color: #fff;
   display: inline;
   float: left;
   margin-right: 0;
@@ -142,49 +161,69 @@ html, body, #container {
   overflow-x: hidden;
 }
 
-/* line 2, ../../../app/stylesheets/partials/_header.scss */
-#header h1 {
-  background-color: #000;
-  font-size: 20px;
-  text-align: center;
-}
-
-/* line 9, ../../../app/stylesheets/partials/_header.scss */
+/* line 1, ../../../app/stylesheets/partials/_header.scss */
 #top_nav {
   overflow: hidden;
   *zoom: 1;
   text-align: center;
-  padding: 20px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -o-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -khtml-border-radius: 15px;
-  border-radius: 15px;
+  padding-bottom: 20px;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_footer.scss */
 #footer {
+  width: 965px;
+  color: #a09f9f;
+  font: 9px Verdana;
+  margin: auto;
   text-align: center;
 }
-/* line 4, ../../../app/stylesheets/partials/_footer.scss */
+/* line 7, ../../../app/stylesheets/partials/_footer.scss */
 #footer p {
-  padding: 20px;
+  padding: 20px 15px 0;
   text-align: left;
 }
-/* line 9, ../../../app/stylesheets/partials/_footer.scss */
+/* line 12, ../../../app/stylesheets/partials/_footer.scss */
 #footer ul#footer_nav {
-  padding: 20px 20px 0 20px;
+  padding: 20px 15px 0 15px;
 }
-/* line 11, ../../../app/stylesheets/partials/_footer.scss */
+/* line 14, ../../../app/stylesheets/partials/_footer.scss */
 #footer ul#footer_nav li {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
+  border-right: 1px solid #aacaf9;
+  margin: 7.5px 0;
+  color: #aacaf9;
+  font-size: 11px;
 }
 /* line 7, ../../../../../.rvm/gems/ruby-1.9.2-p180@fff/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 #footer ul#footer_nav li {
   *display: inline;
+}
+/* line 20, ../../../app/stylesheets/partials/_footer.scss */
+#footer ul#footer_nav li a {
+  text-decoration: none;
+  padding: 0 15px;
+  color: #aacaf9;
+  font-size: 11px;
+}
+/* line 26, ../../../app/stylesheets/partials/_footer.scss */
+#footer ul#footer_nav li a:hover {
+  text-decoration: underline;
+}
+/* line 30, ../../../app/stylesheets/partials/_footer.scss */
+#footer ul#footer_nav li.last {
+  border: 0;
+}
+/* line 33, ../../../app/stylesheets/partials/_footer.scss */
+#footer ul#footer_nav li.no_link {
+  padding-right: 15px;
+}
+
+/* line 3, ../../../app/stylesheets/partials/_nav.scss */
+#top_nav ul li {
+  float: left;
+  padding-right: 20px;
 }

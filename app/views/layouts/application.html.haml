@@ -1,14 +1,12 @@
 = render 'layouts/header'
 
 %body
-  #container
-    #layout
-      #header
-        %h1
-          = t("site_name")
+  #layout
+
+    #container
 
       #top_nav
-        = render "shared/nav"
+        = render "shared/top_nav"
 
       #sidebar
         %ul
@@ -27,5 +25,5 @@
         = textilize @cms_page.body
         = yield
 
-      #footer_spacer
-    = render 'layouts/footer'
+    #footer_spacer
+  = render 'layouts/footer'

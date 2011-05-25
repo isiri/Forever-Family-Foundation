@@ -1,18 +1,35 @@
-@include sticky-footer(275px, "#layout", "#footer_spacer", "#footer");
+@include sticky-footer(200px, "#layout", "#footer_spacer", "#footer");
 
 html, body, #container {
   height: 100%;
-  background-color: #000;  
+}
+
+body {
+  background:#000 url('/images/header.jpg') no-repeat top;
+  padding-top: 90px;
+}
+
+#layout {
+  width:$page-width;
+  margin:auto;
+  @include border-radius;
+  // padding: $padd-top $padd-sides;
+  background-color:#fff;
 }
 
 #container {
-  padding: $global-padding;
+  padding: $padd-top $padd-sides;
   @include container;
-  background-color: #fff;
   #header, #footer {
     @include column(24); }
   #sidebar {
+    background-color:#fff;
     @include column(6); }
   #content {
-    @include column(18, true); } }
+    background-color:#fff;
+    @include column(18, true); }
+  }
     
+// #content, #sidebar {
+//   padding-top: $padd-top;
+// }

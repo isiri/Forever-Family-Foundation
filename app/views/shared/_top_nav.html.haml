@@ -1,0 +1,27 @@
+%ul
+  %li 
+    = link_to "Become a member"
+  %li 
+    = link_to "Login"
+    
+%ul  
+  - if is_admin?
+    %li
+      = link_to t("navigation.admin"), '/admin' if is_admin?
+  - elsif current_user
+    %li
+      = link_to t("navigation.home"), url_for(:controller => 'welcome', :action => 'logged_in_index')
+    %li    
+      = link_to t("navigation.edit"), edit_account_path
+    %li
+      = link_to t("navigation.logout"), destroy_user_session_path
+  - else
+    %li
+      = link_to t("navigation.home"), root_path
+    %li    
+      = link_to t("navigation.login"), new_user_session_path
+    %li  
+      = link_to t("navigation.register"), new_account_path
+
+  %li    
+    = link_to t("navigation.adg_registration"), new_adg_registration_path

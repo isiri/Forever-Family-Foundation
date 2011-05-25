@@ -1,15 +1,6 @@
-#header {
-  h1 {
-    background-color: #000;
-    font-size: 20px;
-    text-align:center;
-  }
-}
-
 #top_nav {
   @include clearfix;
   text-align:center;
-  padding: $global-padding;
-  
-  @include border-radius;
+  padding-bottom: $padd-top;
+
 }
