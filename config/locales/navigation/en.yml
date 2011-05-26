@@ -1,0 +1,15 @@
+en:
+  navigation:
+    global:
+      adg_registration: Afterlife Discussion Group Enrollment    
+      signs_of_life_radio: Signs of Life Radio
+      events: Events
+      store: FFF Store
+      volunteers: Volunteers
+      contributers: Contributers
+    user:
+      home: Home
+      login: Login
+      register: Register
+    site:
+      

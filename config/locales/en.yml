@@ -3,11 +3,6 @@
 
 en:
   site_name: Forever Family Foundation
-  navigation:
-    home: Home
-    login: Login
-    adg_registration: Afterlife Discussion Group Enrollment    
-    register: Register
   logout: Logout
   email: Email
   email_confirmation: Email confirmation
