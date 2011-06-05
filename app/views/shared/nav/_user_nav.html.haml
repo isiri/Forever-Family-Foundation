@@ -1,25 +1,19 @@
 %ul.nav#user_nav
   %li
-    = link_to "Become a member"
+    = link_to t("navigation.user.become_a_member")
   %li
-    = link_to "Login"
+    = link_to t("navigation.user.login")
 
   - if false
-    - if is_admin?
-      %li
-        = link_to t("navigation.admin"), '/admin' if is_admin?
-    - elsif current_user
-      %li
-        = link_to t("navigation.home"), url_for(:controller => 'welcome', :action => 'logged_in_index')
-      %li
-        = link_to t("navigation.edit"), edit_account_path
-      %li
-        = link_to t("navigation.logout"), destroy_user_session_path
-    - else
-      %li
-        = link_to t("navigation.home"), root_path
-      %li
-        = link_to t("navigation.login"), new_user_session_path
-      %li
-        = link_to t("navigation.register"), new_account_path
-  
+    %li
+      = link_to t("navigation.home"), url_for(:controller => 'welcome', :action => 'logged_in_index')
+    %li
+      = link_to t("navigation.edit"), edit_account_path
+    %li
+      = link_to t("navigation.logout"), destroy_user_session_path
+    %li
+      = link_to t("navigation.home"), root_path
+    %li
+      = link_to t("navigation.login"), new_user_session_path
+    %li
+      = link_to t("navigation.register"), new_account_path

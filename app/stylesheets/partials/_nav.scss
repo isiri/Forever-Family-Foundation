@@ -1,21 +1,31 @@
 #user_nav, #global_nav{
   float:left;
+  margin-top:0;
   margin-right:$padd-sides*2;
+  
   li {
     @include inline-block;
     padding-top:$padd-top;
     padding-right:$padd-top;
+    
     a{
       font-size:13px;
       font-weight:bold;
       color:$dark-blue;
       text-decoration:none;
+      
       &:hover {
         text-decoration:underline;
       }
     }
+    
     &.current {
       background:url('/images/nav-indicator.gif') no-repeat center top;
     }
   }
+}
+
+#site_nav {
+  float:left;
+  margin-top: $padd-top;
 }

@@ -32,4 +32,5 @@ body {
 
 #content_main {
   @include clearfix;
+  margin-top: $padd-top;
 }

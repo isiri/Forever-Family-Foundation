@@ -166,6 +166,7 @@ body {
 #content_main {
   overflow: hidden;
   *zoom: 1;
+  margin-top: 20px;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_footer.scss */
@@ -224,9 +225,10 @@ body {
 /* line 1, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav, #global_nav {
   float: left;
+  margin-top: 0;
   margin-right: 30px;
 }
-/* line 4, ../../../app/stylesheets/partials/_nav.scss */
+/* line 6, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav li, #global_nav li {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -240,18 +242,24 @@ body {
 #user_nav li, #global_nav li {
   *display: inline;
 }
-/* line 8, ../../../app/stylesheets/partials/_nav.scss */
+/* line 11, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav li a, #global_nav li a {
   font-size: 13px;
   font-weight: bold;
   color: #084296;
   text-decoration: none;
 }
-/* line 13, ../../../app/stylesheets/partials/_nav.scss */
+/* line 17, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav li a:hover, #global_nav li a:hover {
   text-decoration: underline;
 }
-/* line 17, ../../../app/stylesheets/partials/_nav.scss */
+/* line 22, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav li.current, #global_nav li.current {
   background: url("/images/nav-indicator.gif") no-repeat center top;
+}
+
+/* line 28, ../../../app/stylesheets/partials/_nav.scss */
+#site_nav {
+  float: left;
+  margin-top: 20px;
 }
