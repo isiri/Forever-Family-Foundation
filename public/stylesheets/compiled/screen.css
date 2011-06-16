@@ -151,6 +151,12 @@ body {
 }
 /* line 28, ../../../app/stylesheets/partials/_layout.scss */
 #container #content, #container #content_main {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px;
   display: inline;
   float: left;
   margin-right: 0;
@@ -162,11 +168,11 @@ body {
   overflow-x: hidden;
 }
 
-/* line 33, ../../../app/stylesheets/partials/_layout.scss */
+/* line 34, ../../../app/stylesheets/partials/_layout.scss */
 #content_main {
   overflow: hidden;
   *zoom: 1;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_footer.scss */
@@ -222,44 +228,83 @@ body {
   padding-right: 15px;
 }
 
-/* line 1, ../../../app/stylesheets/partials/_nav.scss */
+/* line 2, ../../../app/stylesheets/partials/_nav.scss */
+.nav a {
+  color: #084296;
+  text-decoration: none;
+}
+/* line 5, ../../../app/stylesheets/partials/_nav.scss */
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* line 11, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav, #global_nav {
   float: left;
   margin-top: 0;
   margin-right: 30px;
 }
-/* line 6, ../../../app/stylesheets/partials/_nav.scss */
+/* line 16, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav li, #global_nav li {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  padding-top: 20px;
-  padding-right: 20px;
+  margin: 0;
+  padding: 20px 20px 0 5px;
+  background: url("/images/nav-dot.gif") no-repeat right 25px;
 }
 /* line 7, ../../../../../.rvm/gems/ruby-1.9.2-p180@fff/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 #user_nav li, #global_nav li {
   *display: inline;
 }
-/* line 11, ../../../app/stylesheets/partials/_nav.scss */
+/* line 22, ../../../app/stylesheets/partials/_nav.scss */
+#user_nav li.first, #global_nav li.first {
+  padding-left: 0;
+}
+/* line 25, ../../../app/stylesheets/partials/_nav.scss */
+#user_nav li.last, #global_nav li.last {
+  background-image: none;
+}
+/* line 29, ../../../app/stylesheets/partials/_nav.scss */
 #user_nav li a, #global_nav li a {
+  position: relative;
   font-size: 13px;
   font-weight: bold;
-  color: #084296;
-  text-decoration: none;
 }
-/* line 17, ../../../app/stylesheets/partials/_nav.scss */
-#user_nav li a:hover, #global_nav li a:hover {
-  text-decoration: underline;
-}
-/* line 22, ../../../app/stylesheets/partials/_nav.scss */
-#user_nav li.current, #global_nav li.current {
-  background: url("/images/nav-indicator.gif") no-repeat center top;
+/* line 35, ../../../app/stylesheets/partials/_nav.scss */
+#user_nav li img.current, #global_nav li img.current {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  margin-left: -10px;
 }
 
-/* line 28, ../../../app/stylesheets/partials/_nav.scss */
+/* line 46, ../../../app/stylesheets/partials/_nav.scss */
 #site_nav {
   float: left;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+/* line 50, ../../../app/stylesheets/partials/_nav.scss */
+#site_nav li {
+  font-size: 14px;
+  padding: 0 0 10px 0;
+}
+/* line 54, ../../../app/stylesheets/partials/_nav.scss */
+#site_nav li a {
+  padding-left: 17px;
+  background: url("/images/nav-star.gif") no-repeat left;
+}
+/* line 60, ../../../app/stylesheets/partials/_nav.scss */
+#site_nav.current {
+  font-weight: bold;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_headers.scss */
+h1 {
+  color: #084296;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

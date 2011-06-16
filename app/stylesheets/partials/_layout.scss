@@ -26,11 +26,12 @@ body {
     @include column(7);  
     background-color:#fff; }
   #content, #content_main {
+    @include border-radius;  
     @include column(17, true);  
     background-color:#fff; }
   }
 
 #content_main {
   @include clearfix;
-  margin-top: $padd-top;
+  margin-top: $padd-top*2;
 }

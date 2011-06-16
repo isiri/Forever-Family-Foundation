@@ -1,15 +1,17 @@
 %ul.nav#global_nav
 
+  %li.first
+    = link_to t("navigation.global.home"), ''
   %li
-    = link_to t("navigation.global.home")
-  %li.current
-    = link_to t("navigation.global.sings_of_life_radio")
+    = link_to t("navigation.global.sings_of_life_radio"), ''
   %li
-    = link_to t("navigation.global.events")
+    = link_to t("navigation.global.events"), ''
   %li
-    = link_to t("navigation.global.fff_store")
+    %a{:href => ''}
+      = image_tag('/images/nav-indicator.gif', :class => :current)
+      = t("navigation.global.fff_store")
   %li
-    = link_to t("navigation.global.volunteers")
-  %li
-    = link_to t("navigation.global.contributers")
+    = link_to t("navigation.global.volunteers"), ''
+  %li.last
+    = link_to t("navigation.global.contributers"), ''
 

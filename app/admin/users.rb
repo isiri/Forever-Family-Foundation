@@ -4,5 +4,6 @@ ActiveAdmin.register User do
     column :email do |user|
       link_to user.email, admin_user_path(user)
     end
+    column :address, :sortable => false
   end
 end

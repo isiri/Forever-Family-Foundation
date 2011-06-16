@@ -1,31 +1,63 @@
+.nav {
+  a{
+    color:$dark-blue;
+    text-decoration:none;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+}
+
 #user_nav, #global_nav{
   float:left;
   margin-top:0;
   margin-right:$padd-sides*2;
-  
+
   li {
     @include inline-block;
-    padding-top:$padd-top;
-    padding-right:$padd-top;
-    
+    margin:0;
+    padding:$padd-top $padd-top 0 5px;
+    background:url('/images/nav-dot.gif') no-repeat right 25px;
+
+    &.first {
+      padding-left:0;
+    }
+    &.last {
+      background-image:none;
+    }
+
     a{
+      position:relative;
       font-size:13px;
       font-weight:bold;
-      color:$dark-blue;
-      text-decoration:none;
-      
-      &:hover {
-        text-decoration:underline;
-      }
     }
-    
-    &.current {
-      background:url('/images/nav-indicator.gif') no-repeat center top;
+
+    img.current {
+      position:absolute;
+      // adjust for a white line at top with -2
+      top: -$padd-top - 2px;
+      left: 50%;
+      // pull image back to center
+      margin-left:-10px;
     }
   }
 }
 
 #site_nav {
   float:left;
-  margin-top: $padd-top;
+  margin-top: $padd-top*2;
+
+  li {
+    font-size:14px;
+    padding: 0 0 $padd-top/2 0;
+    
+    a {
+      padding-left: 17px;
+      background:url('/images/nav-star.gif') no-repeat left;
+    }
+  }
+  
+  &.current {
+    font-weight:bold;
+  }
 }
